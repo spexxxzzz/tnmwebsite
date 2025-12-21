@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <defs>
+    <filter id="cyan-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.3  0 0 0 0 0.78  0 0 0 0 0.91  0 0 0 1 0" result="cyan"/>
+      <feMerge>
+        <feMergeNode in="cyan"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Letter group with glow -->
+  <g filter="url(#cyan-glow)">
+    <!-- T -->
+    <text x="5" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="38" font-weight="400" fill="#000000" letter-spacing="2">T</text>
+    
+    <!-- ∧ (Lambda/Wedge) - thinner -->
+    <text x="45" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="38" font-weight="300" fill="#000000">∧</text>
+    
+    <!-- M -->
+    <text x="90" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="38" font-weight="400" fill="#000000" letter-spacing="2">M</text>
+    
+    <!-- C -->
+    <text x="145" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="38" font-weight="400" fill="#000000" letter-spacing="2">C</text>
+  </g>
+</svg>
