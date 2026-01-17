@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tensor & Maxwell | Embedded AI for Precision Machines</title>
-    <meta name="description" content="T&M Corp builds productized AI software that runs directly inside high-precision industrial devices.">
+    <title>Tensor & Maxwell | AI Supervision for Physical Machines</title>
+    <meta name="description" content="The supervisory layer that decides when AI should be allowed to act. We don't replace AI—we make it safe to trust.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,13 +15,14 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="#" class="logo">
-                <img src="logo.svg" alt="T∧MC" class="logo-image">
+                <div class="logo-mark">T<span class="logo-lambda">∧</span>MC</div>
                 <span class="logo-text">Tensor ∧ Maxwell Corporation</span>
             </a>
             <div class="nav-links">
-                <a href="#platform">Platform</a>
-                <a href="#use-cases">Use Cases</a>
-                <a href="#contact" class="nav-cta">Contact Us</a>
+                <a href="#problem">Problem</a>
+                <a href="#solution">Solution</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#contact" class="nav-cta">Get in Touch</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <span></span>
@@ -32,180 +33,89 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-grid"></div>
-        <div class="hero-content">
-            <div class="hero-tagline">
-                Embedded AI Operating Layer
-            </div>
-            <h1><span class="gradient-blue">AI</span> That Lives<br>Inside The<br><span class="gradient-yellow">Device</span></h1>
+        <div class="hero-bg">
+            <div class="grid-pattern"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+        <div class="hero-top-banner">
+            <h1 class="banner-text">AI <span class="gradient-word">Supervision</span> Layer</h1>
+        </div>
+        <div class="hero-center">
+            <h2 class="hero-headline"><span class="headline-line">Decide When AI Should Be Allowed <span class="highlight">To Act</span> and <span class="text-red">When Not</span></span></h2>
             <p class="hero-subtitle">
-                We build productized AI software that runs directly inside 
-                high-precision industrial devices. Edge-native. Science-aware. Deterministic.
+                We build the supervisory software that sits between AI systems and machine actions. 
+                We don't replace AI models—we make them safe to trust.
             </p>
             <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">
-                    <span>Partner With Us</span>
+                <a href="mailto:info@tensormaxwell.com" class="btn btn-primary">
+                    Partner With Us
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                 </a>
-                <a href="#platform" class="btn btn-secondary">Explore Platform</a>
-            </div>
-            <div class="hero-metrics">
-                <div class="metric">
-                    <span class="metric-value">&lt;10ms</span>
-                    <span class="metric-label">Inference Latency</span>
-                </div>
-                <div class="metric-divider"></div>
-                <div class="metric">
-                    <span class="metric-value">100%</span>
-                    <span class="metric-label">Offline Capable</span>
-                </div>
-                <div class="metric-divider"></div>
-                <div class="metric">
-                    <span class="metric-value">∞</span>
-                    <span class="metric-label">Edge Deployment</span>
-                </div>
+                <a href="#solution" class="btn btn-ghost">Learn More</a>
             </div>
         </div>
-        <div class="hero-visual">
-            <div class="pipeline-viz">
-                <!-- Input Device -->
-                <div class="pipeline-node node-device">
-                    <div class="device-graphic">
-                        <div class="device-body">
-                            <div class="device-screen"></div>
-                            <div class="device-arm">
-                                <div class="arm-segment"></div>
-                                <div class="arm-joint"></div>
-                                <div class="arm-segment short"></div>
-                            </div>
+        <div class="hero-visual-horizontal">
+            <div class="diagram-flow">
+                <!-- Three Equal Boxes -->
+                <div class="flow-boxes">
+                    <!-- Box 1: AI Model -->
+                    <div class="flow-box">
+                        <div class="box-number">1</div>
+                        <div class="box-icon ai-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                            </svg>
                         </div>
-                        <div class="device-base"></div>
+                        <h4>AI Model</h4>
+                        <p>Makes a prediction</p>
                     </div>
-                    <div class="node-label">Industrial Device</div>
-                </div>
 
-                <!-- Data Flow Left -->
-                <div class="data-flow flow-left">
-                    <svg class="flow-svg" viewBox="0 0 120 100" preserveAspectRatio="none">
-                        <defs>
-                            <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
-                                <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.8"/>
-                            </linearGradient>
-                        </defs>
-                        <path class="flow-path" d="M0,50 Q30,30 60,50 T120,50" fill="none" stroke="url(#blueGrad)" stroke-width="40"/>
-                        <path class="flow-line flow-line-1" d="M0,35 Q30,20 60,35 T120,35"/>
-                        <path class="flow-line flow-line-2" d="M0,50 Q30,30 60,50 T120,50"/>
-                        <path class="flow-line flow-line-3" d="M0,65 Q30,45 60,65 T120,65"/>
-                    </svg>
-                    <div class="flow-particles" id="flow-left-particles"></div>
-                    <div class="flow-label">RAW DATA</div>
-                </div>
+                    <!-- Arrow -->
+                    <div class="flow-arrow">→</div>
 
-                <!-- AI Chip Center -->
-                <div class="pipeline-node node-chip">
-                    <div class="chip-container">
-                        <div class="chip-glow"></div>
-                        <div class="chip-body">
-                            <div class="chip-core">
-                                <div class="neural-web">
-                                    <span class="n-node n1"></span>
-                                    <span class="n-node n2"></span>
-                                    <span class="n-node n3"></span>
-                                    <span class="n-node n4"></span>
-                                    <span class="n-node n5"></span>
-                                    <span class="n-node center"></span>
-                                    <svg class="n-connections">
-                                        <line x1="20%" y1="20%" x2="50%" y2="50%"/>
-                                        <line x1="80%" y1="20%" x2="50%" y2="50%"/>
-                                        <line x1="20%" y1="80%" x2="50%" y2="50%"/>
-                                        <line x1="80%" y1="80%" x2="50%" y2="50%"/>
-                                        <line x1="50%" y1="10%" x2="50%" y2="50%"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="chip-pins pins-left"></div>
-                            <div class="chip-pins pins-right"></div>
-                            <div class="chip-pins pins-top"></div>
-                            <div class="chip-pins pins-bottom"></div>
+                    <!-- Box 2: T&MC Supervisor -->
+                    <div class="flow-box flow-box-main">
+                        <div class="box-number">2</div>
+                        <div class="box-icon supervisor-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
                         </div>
+                        <h4>T∧MC Supervisor</h4>
+                        <p>Evaluates if safe to act</p>
                     </div>
-                    <div class="node-label">T∧MC AI Engine</div>
-                </div>
 
-                <!-- Data Flow Right -->
-                <div class="data-flow flow-right">
-                    <svg class="flow-svg" viewBox="0 0 120 100" preserveAspectRatio="none">
-                        <defs>
-                            <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.8"/>
-                                <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.3"/>
-                            </linearGradient>
-                        </defs>
-                        <path class="flow-path" d="M0,50 Q30,70 60,50 T120,50" fill="none" stroke="url(#greenGrad)" stroke-width="40"/>
-                        <path class="flow-line flow-line-1 green" d="M0,35 Q30,55 60,35 T120,35"/>
-                        <path class="flow-line flow-line-2 green" d="M0,50 Q30,70 60,50 T120,50"/>
-                        <path class="flow-line flow-line-3 green" d="M0,65 Q30,85 60,65 T120,65"/>
-                    </svg>
-                    <div class="flow-particles" id="flow-right-particles"></div>
-                    <div class="flow-label green">INTELLIGENCE</div>
-                </div>
+                    <!-- Arrow -->
+                    <div class="flow-arrow">→</div>
 
-                <!-- Output Display -->
-                <div class="pipeline-node node-output">
-                    <div class="output-graphic">
-                        <div class="monitor-frame">
-                            <div class="monitor-screen">
-                                <div class="screen-chart">
-                                    <div class="chart-bar b1"></div>
-                                    <div class="chart-bar b2"></div>
-                                    <div class="chart-bar b3"></div>
-                                    <div class="chart-bar b4"></div>
-                                </div>
-                                <div class="screen-wave"></div>
-                            </div>
+                    <!-- Box 3: Machine -->
+                    <div class="flow-box">
+                        <div class="box-number">3</div>
+                        <div class="box-icon machine-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="4" width="18" height="16" rx="2"/>
+                                <path d="M7 8h4M7 12h8"/>
+                                <circle cx="16" cy="10" r="2"/>
+                            </svg>
                         </div>
-                        <div class="monitor-stand"></div>
+                        <h4>Machine</h4>
+                        <p>Executes action</p>
                     </div>
-                    <div class="node-label">Actionable Insights</div>
                 </div>
 
-                <!-- AI Control Feedback Loop -->
-                <div class="control-loop">
-                    <svg class="control-arrow" viewBox="0 0 100 50" preserveAspectRatio="none">
-                        <defs>
-                            <linearGradient id="controlGrad" x1="100%" y1="0%" x2="0%" y2="0%">
-                                <stop offset="0%" style="stop-color:#8b5cf6"/>
-                                <stop offset="50%" style="stop-color:#6366f1"/>
-                                <stop offset="100%" style="stop-color:#0ea5e9"/>
-                            </linearGradient>
-                            <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                                <polygon points="0 0, 8 3, 0 6" fill="#0ea5e9"/>
-                            </marker>
-                        </defs>
-                        <!-- Arrow from right (computer) to left (device) -->
-                        <path d="M95,0 L95,35 Q95,45 85,45 L15,45 Q5,45 5,35 L5,-3" 
-                              fill="none" 
-                              stroke="url(#controlGrad)" 
-                              stroke-width="2" 
-                              stroke-dasharray="5,3" 
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              marker-end="url(#arrowhead)" 
-                              class="control-path"/>
-                    </svg>
-                    <div class="control-label">
-                        <svg class="brain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/>
-                            <rect x="8" y="10" width="8" height="6" rx="1"/>
-                            <line x1="10" y1="16" x2="10" y2="19"/>
-                            <line x1="14" y1="16" x2="14" y2="19"/>
-                            <circle cx="10" cy="4.5" r="0.5" fill="currentColor"/>
-                            <circle cx="14" cy="4.5" r="0.5" fill="currentColor"/>
-                        </svg>
-                        <span>AI CONTROL</span>
+                <!-- Decision Options Row -->
+                <div class="flow-decisions">
+                    <span class="decision-label">Supervisor decides:</span>
+                    <div class="decision-options">
+                        <span class="opt opt-allow">✓ Allow</span>
+                        <span class="opt opt-limit">◐ Limit</span>
+                        <span class="opt opt-pause">⏸ Pause</span>
+                        <span class="opt opt-human">👤 Ask Human</span>
                     </div>
                 </div>
             </div>
@@ -215,258 +125,278 @@
     <!-- Problem Section -->
     <section class="problem" id="problem">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">The Challenge</span>
-                <h2>Great Hardware. <span class="gradient-orange">Missing Intelligence.</span></h2>
+            <div class="section-label">The Problem</div>
+            <div class="problem-content">
+                <div class="problem-main">
+                    <h2>AI is powerful.<br><span class="text-muted">But it makes mistakes.</span></h2>
+                    <p class="problem-lead">
+                        Today, AI models analyze sensor data and recommend actions across laboratories, 
+                        factories, and autonomous systems. But AI doesn't always know when it's wrong. 
+                        It behaves unpredictably. It hallucinates. And machines may act on outputs that 
+                        should never have been trusted.
+                    </p>
+                </div>
+                <div class="problem-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 8v4M12 16h.01"/>
+                            </svg>
+                        </div>
+                        <p>AI models can't reliably detect their own failures</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                <line x1="12" y1="9" x2="12" y2="13"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                        </div>
+                        <p>Physical actions on bad AI outputs cause real-world harm</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 9h18M9 21V9"/>
+                            </svg>
+                        </div>
+                        <p>Companies fall back to rigid rules—safe but limited</p>
+                    </div>
+                </div>
             </div>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">
+            <div class="problem-consequence">
+                <div class="consequence-line"></div>
+                <p>
+                    <strong>The result:</strong> AI remains underused in physical systems. 
+                    Deployments stay stuck at pilot stages. The promise of intelligent machines goes unfulfilled.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution" id="solution">
+        <div class="container">
+            <div class="section-label">Our Solution</div>
+            <h2>A supervisory layer that<br><span class="highlight">governs AI actions</span></h2>
+            <p class="section-description">
+                We don't replace AI models. We don't generate predictions. We act as an independent 
+                decision layer that evaluates whether AI outputs are reliable enough to be used at a given moment.
+            </p>
+            
+            <div class="solution-architecture">
+                <div class="arch-header">
+                    <span class="arch-label">Before any machine acts, we check:</span>
+                </div>
+                <div class="check-grid">
+                    <div class="check-item">
+                        <div class="check-number">01</div>
+                        <h4>Sensor Data Quality</h4>
+                        <p>Is the input data clean, complete, and within expected ranges?</p>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-number">02</div>
+                        <h4>AI Model Confidence</h4>
+                        <p>How certain is the model? Does it know what it doesn't know?</p>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-number">03</div>
+                        <h4>Machine Health</h4>
+                        <p>Is the equipment operating normally? Any signs of degradation?</p>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-number">04</div>
+                        <h4>Drift Detection</h4>
+                        <p>Has the data distribution shifted from what the model was trained on?</p>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-number">05</div>
+                        <h4>Physical Plausibility</h4>
+                        <p>Does the proposed action make sense within known physical limits?</p>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-number">06</div>
+                        <h4>Historical Context</h4>
+                        <p>How does this situation compare to past decisions and outcomes?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="solution-decisions">
+                <h3>Based on evaluation, we make a clear decision:</h3>
+                <div class="decision-grid">
+                    <div class="decision-card decision-allow">
+                        <div class="decision-header">
+                            <span class="decision-icon-large">✓</span>
+                            <h4>Allow</h4>
+                        </div>
+                        <p>Conditions are good. AI output is trustworthy. Proceed normally.</p>
+                    </div>
+                    <div class="decision-card decision-limit">
+                        <div class="decision-header">
+                            <span class="decision-icon-large">◐</span>
+                            <h4>Limit</h4>
+                        </div>
+                        <p>Some uncertainty. Constrain action to safe parameters.</p>
+                    </div>
+                    <div class="decision-card decision-slow">
+                        <div class="decision-header">
+                            <span class="decision-icon-large">↓</span>
+                            <h4>Slow Down</h4>
+                        </div>
+                        <p>Elevated risk. Reduce speed and intensity of operation.</p>
+                    </div>
+                    <div class="decision-card decision-pause">
+                        <div class="decision-header">
+                            <span class="decision-icon-large">⏸</span>
+                            <h4>Pause</h4>
+                        </div>
+                        <p>High uncertainty. Stop and wait for conditions to stabilize.</p>
+                    </div>
+                    <div class="decision-card decision-human">
+                        <div class="decision-header">
+                            <span class="decision-icon-large">👤</span>
+                            <h4>Human Required</h4>
+                        </div>
+                        <p>Critical situation. Require human approval before proceeding.</p>
+                    </div>
+                </div>
+                <p class="decision-note">
+                    If uncertainty increases, the system becomes more conservative. 
+                    If conditions stabilize, normal operation resumes. All decisions are logged and explainable.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiators Section -->
+    <section class="differentiators" id="how-it-works">
+        <div class="container">
+            <div class="section-label">Why It Matters</div>
+            <h2>Built for the real world</h2>
+            <div class="diff-grid">
+                <div class="diff-card">
+                    <div class="diff-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="4" y="4" width="16" height="16" rx="2"/>
+                            <rect x="9" y="9" width="6" height="6"/>
+                            <line x1="9" y1="1" x2="9" y2="4"/>
+                            <line x1="15" y1="1" x2="15" y2="4"/>
+                            <line x1="9" y1="20" x2="9" y2="23"/>
+                            <line x1="15" y1="20" x2="15" y2="23"/>
+                            <line x1="1" y1="9" x2="4" y2="9"/>
+                            <line x1="1" y1="15" x2="4" y2="15"/>
+                            <line x1="20" y1="9" x2="23" y2="9"/>
+                            <line x1="20" y1="15" x2="23" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>Runs on the Edge</h3>
+                    <p>
+                        All processing happens locally on the machine. No cloud dependency. 
+                        No latency. Complete data sovereignty.
+                    </p>
+                </div>
+                <div class="diff-card">
+                    <div class="diff-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 12h6l3-9 3 18 3-9h5"/>
+                        </svg>
+                    </div>
+                    <h3>Works Offline</h3>
+                    <p>
+                        Suitable for environments where connectivity is unreliable or prohibited. 
+                        Safety doesn't depend on a network connection.
+                    </p>
+                </div>
+                <div class="diff-card">
+                    <div class="diff-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <circle cx="12" cy="12" r="10"/>
                             <path d="M12 6v6l4 2"/>
                         </svg>
                     </div>
-                    <h3>Cloud Dependency</h3>
-                    <p>Existing AI solutions require constant connectivity, introducing latency, security risks, and single points of failure.</p>
+                    <h3>Deterministic</h3>
+                    <p>
+                        Same input, same output. Every time. Critical for certified systems 
+                        and regulated industries.
+                    </p>
                 </div>
-                <div class="problem-card">
-                    <div class="problem-icon">
+                <div class="diff-card">
+                    <div class="diff-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            <path d="M3 9h18M9 21V9"/>
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
                         </svg>
                     </div>
-                    <h3>Generic Toolkits</h3>
-                    <p>Off-the-shelf ML frameworks ignore domain science, lack determinism, and weren't built for regulated environments.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
-                            <polyline points="7.5 19.79 7.5 14.6 3 12"/>
-                        </svg>
-                    </div>
-                    <h3>Wrong Abstraction Layer</h3>
-                    <p>Factory-level MES and analytics operate too far from the device. Real-time decisions need to happen at the edge.</p>
+                    <h3>Explainable</h3>
+                    <p>
+                        Every decision comes with a traceable rationale. Full auditability 
+                        for compliance, debugging, and continuous improvement.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Platform Section -->
-    <section class="platform" id="platform">
+    <!-- Industries Section -->
+    <section class="industries">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Our Platform</span>
-                <h2>The Embedded <span class="gradient-blue">AI Operating Layer</span></h2>
-                <p class="section-description">
-                    A productized software layer designed specifically for science-driven systems. 
-                    Productized. Deterministic. Built for mission-critical environments.
-                </p>
-            </div>
-            <div class="platform-architecture">
-                <div class="arch-layer arch-sensors">
-                    <div class="layer-label">Sensor Ingestion</div>
-                    <div class="layer-content">
-                        <div class="data-flow">
-                            <span class="flow-item">Accelerometers</span>
-                            <span class="flow-item">Spectrometers</span>
-                            <span class="flow-item">Thermal</span>
-                            <span class="flow-item">Optical</span>
-                            <span class="flow-item">Pressure</span>
-                            <span class="flow-item">Vibration</span>
-                            <span class="flow-item">Torque</span>
-                            <span class="flow-item">Gas Analyzers</span>
-                        </div>
+            <div class="section-label">Applications</div>
+            <h2>Universal across physical AI</h2>
+            <p class="section-description">
+                The problem we solve—deciding whether AI can be trusted before acting—exists 
+                in every machine that uses AI to interact with the physical world.
+            </p>
+            <div class="industry-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
                     </div>
+                    <h4>Scientific Instruments</h4>
+                    <p>Spectrometers, chromatographs, and analytical instruments requiring real-time decisions.</p>
                 </div>
-                <div class="arch-connector">
-                    <div class="connector-line"></div>
-                    <span class="connector-label">High-Frequency Data Stream</span>
-                </div>
-                <div class="arch-layer arch-processing">
-                    <div class="layer-label">T&M Core Engine</div>
-                    <div class="layer-content">
-                        <div class="engine-modules">
-                            <div class="module">
-                                <span class="module-icon">φ</span>
-                                <span class="module-name">Science-Aware Feature Extraction</span>
-                            </div>
-                            <div class="module">
-                                <span class="module-icon">Δ</span>
-                                <span class="module-name">Deterministic AI Inference</span>
-                            </div>
-                            <div class="module">
-                                <span class="module-icon">λ</span>
-                                <span class="module-name">Explainable Decision Engine</span>
-                            </div>
-                        </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="4" y="4" width="16" height="16" rx="2"/>
+                            <rect x="9" y="9" width="6" height="6"/>
+                        </svg>
                     </div>
+                    <h4>Semiconductor Equipment</h4>
+                    <p>Metrology and process tools where nanometer precision demands zero false actions.</p>
                 </div>
-                <div class="arch-connector">
-                    <div class="connector-line"></div>
-                    <span class="connector-label">Validated Outputs</span>
-                </div>
-                <div class="arch-layer arch-outputs">
-                    <div class="layer-label">Actionable Intelligence & AI Control</div>
-                    <div class="layer-content">
-                        <div class="output-cards">
-                            <div class="output-card">
-                                <span class="output-icon">⚠</span>
-                                <span>Anomaly Detection</span>
-                            </div>
-                            <div class="output-card">
-                                <span class="output-icon">♥</span>
-                                <span>Health Scoring</span>
-                            </div>
-                            <div class="output-card">
-                                <span class="output-icon">◉</span>
-                                <span>Fault Classification</span>
-                            </div>
-                            <div class="output-card">
-                                <span class="output-icon">→</span>
-                                <span>Predictive Insights & AI Control</span>
-                            </div>
-                        </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
                     </div>
+                    <h4>Industrial Machines</h4>
+                    <p>CNC machines, turbines, and precision manufacturing where downtime costs millions.</p>
                 </div>
-            </div>
-            <div class="platform-features">
-                <div class="feature">
-                    <div class="feature-header">
-                        <span class="feature-number">01</span>
-                        <h3>Fully Offline</h3>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="6" y="2" width="12" height="9" rx="2"/>
+                            <circle cx="9" cy="6" r="1" fill="currentColor"/>
+                            <circle cx="15" cy="6" r="1" fill="currentColor"/>
+                            <rect x="7" y="12" width="10" height="7" rx="1"/>
+                            <line x1="9" y1="19" x2="9" y2="22"/>
+                            <line x1="15" y1="19" x2="15" y2="22"/>
+                        </svg>
                     </div>
-                    <p>Zero cloud dependency. All inference runs on-device with guaranteed latency and complete data sovereignty.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-header">
-                        <span class="feature-number">02</span>
-                        <h3>Deterministic</h3>
-                    </div>
-                    <p>Same input, same output. Every time. Critical for certified systems and regulated industries.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-header">
-                        <span class="feature-number">03</span>
-                        <h3>Explainable</h3>
-                    </div>
-                    <p>Every decision comes with a traceable rationale. Full auditability for compliance and debugging.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-header">
-                        <span class="feature-number">04</span>
-                        <h3>Seamlessly Integrated</h3>
-                    </div>
-                    <p>Embedded directly into your devices at manufacturing. One platform, endless applications.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Use Cases Section -->
-    <section class="use-cases" id="use-cases">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Applications</span>
-                <h2>Where <span class="gradient-yellow">Precision</span> Meets <span class="gradient-blue">Intelligence</span></h2>
-            </div>
-            <div class="use-cases-grid">
-                <div class="use-case-card">
-                    <div class="use-case-header">
-                        <div class="use-case-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                <path d="M2 17l10 5 10-5"/>
-                                <path d="M2 12l10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <span class="use-case-tag">Today</span>
-                    </div>
-                    <h3>Scientific Instruments</h3>
-                    <p>Spectrometers, chromatographs, and analytical instruments that require real-time anomaly detection and predictive maintenance.</p>
-                    <ul class="use-case-benefits">
-                        <li>Sub-millisecond fault detection</li>
-                        <li>Calibration drift prediction</li>
-                        <li>Quality assurance automation</li>
-                        <li>Run to run control via AI</li>
-                    </ul>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-header">
-                        <div class="use-case-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="4" y="4" width="16" height="16" rx="2"/>
-                                <rect x="9" y="9" width="6" height="6"/>
-                                <line x1="9" y1="1" x2="9" y2="4"/>
-                                <line x1="15" y1="1" x2="15" y2="4"/>
-                                <line x1="9" y1="20" x2="9" y2="23"/>
-                                <line x1="15" y1="20" x2="15" y2="23"/>
-                            </svg>
-                        </div>
-                        <span class="use-case-tag">Today</span>
-                    </div>
-                    <h3>Semiconductor Equipment</h3>
-                    <p>Metrology, inspection, and process tools where nanometer-level precision and zero false positives are non-negotiable.</p>
-                    <ul class="use-case-benefits">
-                        <li>Process excursion detection</li>
-                        <li>Tool health monitoring</li>
-                        <li>Yield optimization signals</li>
-                        <li>Run to run control via AI</li>
-                    </ul>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-header">
-                        <div class="use-case-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                            </svg>
-                        </div>
-                        <span class="use-case-tag">Today</span>
-                    </div>
-                    <h3>Industrial Machines</h3>
-                    <p>CNC machines, turbines, compressors, and precision manufacturing equipment requiring predictive intelligence.</p>
-                    <ul class="use-case-benefits">
-                        <li>Vibration pattern analysis</li>
-                        <li>Remaining useful life estimation</li>
-                        <li>Automated maintenance scheduling</li>
-                        <li>Run to run control via AI</li>
-                    </ul>
-                </div>
-                <div class="use-case-card use-case-future">
-                    <div class="use-case-header">
-                        <div class="use-case-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <!-- Robot head -->
-                                <rect x="6" y="2" width="12" height="9" rx="2"/>
-                                <circle cx="9" cy="6" r="1" fill="currentColor"/>
-                                <circle cx="15" cy="6" r="1" fill="currentColor"/>
-                                <line x1="9" y1="9" x2="15" y2="9"/>
-                                <!-- Robot body -->
-                                <rect x="7" y="12" width="10" height="7" rx="1"/>
-                                <!-- Robot arms -->
-                                <line x1="5" y1="14" x2="7" y2="14"/>
-                                <line x1="17" y1="14" x2="19" y2="14"/>
-                                <line x1="4" y1="14" x2="4" y2="17"/>
-                                <line x1="20" y1="14" x2="20" y2="17"/>
-                                <!-- Robot legs -->
-                                <line x1="9" y1="19" x2="9" y2="22"/>
-                                <line x1="15" y1="19" x2="15" y2="22"/>
-                            </svg>
-                        </div>
-                        <span class="use-case-tag future">Tomorrow</span>
-                    </div>
-                    <h3>Autonomous Systems & Robotics</h3>
-                    <p>The same science-aware AI foundation naturally extends to actuated systems—becoming the standard software layer for intelligent machines.</p>
-                    <ul class="use-case-benefits">
-                        <li>Real-time control adaptation</li>
-                        <li>Environmental perception</li>
-                        <li>Safety-critical decision making</li>
-                        <li>Run to run control via AI</li>
-                    </ul>
+                    <h4>Autonomous Systems</h4>
+                    <p>Robotics and autonomous vehicles where safety-critical decisions happen in milliseconds.</p>
                 </div>
             </div>
         </div>
@@ -476,25 +406,27 @@
     <section class="cta" id="contact">
         <div class="container">
             <div class="cta-content">
-                <h2>Build <span class="gradient-purple">Smarter</span> Machines</h2>
+<div class="cta-badge cta-badge-patented">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M9 12l2 2 4-4"/>
+                </svg>
+                <span>Patented</span>
+            </div>
+                <h2>Let's build machines<br>that know when to trust AI</h2>
                 <p>
-                    Ready to embed intelligence into your next-generation devices? 
-                    Let's discuss how T&M can become your AI advantage.
+                    We're looking for forward-thinking OEMs who want to embed intelligence 
+                    into their devices—safely. Let's discuss how T&M can become your AI supervision layer.
                 </p>
                 <div class="cta-actions">
                     <a href="mailto:info@tensormaxwell.com" class="btn btn-primary btn-large">
-                        <span>Start a Conversation</span>
+                        Start a Conversation
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
                     </a>
                 </div>
-                <div class="cta-note">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    </svg>
-                    <span>NDA-ready technical discussions available</span>
-                </div>
+                <p class="cta-note">NDA-ready technical discussions available</p>
             </div>
         </div>
     </section>
@@ -504,16 +436,17 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="logo.svg" alt="T∧MC" class="logo-image logo-image-small">
-                    <span class="footer-tagline">Tensor ∧ Maxwell Corporation</span>
+                    <div class="logo-mark small">T<span class="logo-lambda">∧</span>MC</div>
+                    <span>Tensor ∧ Maxwell Corporation</span>
                 </div>
                 <div class="footer-links">
-                    <a href="#platform">Platform</a>
-                    <a href="#use-cases">Use Cases</a>
+                    <a href="#problem">Problem</a>
+                    <a href="#solution">Solution</a>
+                    <a href="#how-it-works">How It Works</a>
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-legal">
-                    <span>© 2024 Tensor & Maxwell Corp. All rights reserved.</span>
+                    © 2024 Tensor & Maxwell Corp. All rights reserved.
                 </div>
             </div>
         </div>
@@ -522,4 +455,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
