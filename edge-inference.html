@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edge Inference | TensorMaxwell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --black:#0a0a0a; --white:#fff; --off:#f7f8fa; --border:#e2e5ed; --muted:#6b7280; --grad:linear-gradient(120deg,#0066ff,#00b4d8,#00d97e); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'Outfit',sans-serif; color:var(--black); background:var(--white); line-height:1.7; }
+    .shell { min-height:100vh; background: radial-gradient(ellipse 700px 500px at 15% 20%, rgba(0,102,255,.06), transparent 70%), radial-gradient(ellipse 500px 350px at 85% 30%, rgba(0,217,126,.06), transparent 70%); }
+    .topbar { padding:28px 5% 0; }
+    .back-btn { display:inline-flex; align-items:center; gap:.6rem; padding:.75rem 1rem; border-radius:999px; text-decoration:none; background:var(--black); color:var(--white); font-size:.82rem; font-weight:600; letter-spacing:.03em; }
+    main { padding:32px 5% 80px; max-width:1100px; margin:0 auto; }
+    .eyebrow { font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:1rem; }
+    h1 { font-family:'Syne',sans-serif; font-size:clamp(2.4rem,5vw,4.8rem); line-height:1.02; letter-spacing:-.05em; max-width:760px; }
+    .lead { max-width:720px; font-size:1.05rem; color:#404040; margin-top:1.3rem; }
+    .hero-card { margin-top:2rem; padding:1.25rem 1.4rem; border:1px solid var(--border); border-radius:16px; background:rgba(255,255,255,.85); max-width:760px; }
+    .hero-card strong { display:block; font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:.5rem; }
+    .grid { display:grid; grid-template-columns:1.2fr .9fr; gap:1.4rem; margin-top:2.5rem; }
+    .panel { border:1px solid var(--border); border-radius:20px; background:var(--off); padding:1.6rem; }
+    .panel h2 { font-family:'Syne',sans-serif; font-size:1.35rem; letter-spacing:-.03em; margin-bottom:1rem; }
+    .panel ul { padding-left:1.1rem; display:grid; gap:.8rem; color:#4b5563; }
+    .panel li { font-size:.95rem; }
+    .stack { display:grid; gap:1rem; }
+    .mini { border:1px solid var(--border); border-radius:18px; background:var(--white); padding:1.2rem; }
+    .mini h3 { font-family:'Syne',sans-serif; font-size:1.02rem; margin-bottom:.55rem; }
+    .mini p { color:#4b5563; font-size:.92rem; }
+    @media (max-width: 860px) { .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="topbar"><a class="back-btn" href="index.html#capabilities">← Back to Portfolio</a></div>
+    <main>
+      <div class="eyebrow">Portfolio Capability</div>
+      <h1>Edge Inference</h1>
+      <p class="lead">We design inference systems that run directly on the device, so model decisions happen at machine speed with predictable latency, controlled memory usage, and no dependence on external connectivity.</p>
+      <div class="hero-card">
+        <strong>What This Covers</strong>
+        Model packaging, runtime optimization, hardware-aware deployment, stream preprocessing, and local decision execution for industrial or embedded environments.
+      </div>
+
+      <div class="grid">
+        <section class="panel">
+          <h2>Technical Scope</h2>
+          <ul>
+            <li>Model execution pipelines tuned for low-latency inference on constrained edge hardware.</li>
+            <li>Hardware-aware optimization for deployment targets such as embedded GPUs, industrial compute nodes, and on-prem accelerators.</li>
+            <li>Local preprocessing, buffering, and feature extraction so raw sensor streams are converted into model-ready input without leaving the device.</li>
+            <li>Deterministic runtime behavior with bounded memory and failure-safe restart strategies for live systems.</li>
+            <li>Direct handoff from inference output into supervisory logic or downstream control software.</li>
+          </ul>
+        </section>
+
+        <div class="stack">
+          <section class="mini">
+            <h3>Typical Deliverables</h3>
+            <p>Packaged runtime, deployment build, device integration layer, monitoring hooks, and validation benchmarks for on-device execution.</p>
+          </section>
+          <section class="mini">
+            <h3>Why It Matters</h3>
+            <p>Edge deployment reduces latency, keeps sensitive data local, and makes AI usable in offline or safety-constrained environments.</p>
+          </section>
+          <section class="mini">
+            <h3>Integration Pattern</h3>
+            <p>Sensor stream → preprocessing → inference runtime → supervision layer → machine action or operator-facing output.</p>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

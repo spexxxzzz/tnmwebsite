@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physics-Aware AI Control | TensorMaxwell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --black:#0a0a0a; --white:#fff; --off:#f7f8fa; --border:#e2e5ed; --muted:#6b7280; }
+    * { box-sizing:border-box; margin:0; padding:0; } body { font-family:'Outfit',sans-serif; color:var(--black); background:var(--white); line-height:1.7; }
+    .shell { min-height:100vh; background: radial-gradient(ellipse 680px 480px at 20% 20%, rgba(0,102,255,.06), transparent 70%), radial-gradient(ellipse 500px 350px at 90% 25%, rgba(0,217,126,.06), transparent 70%); }
+    .topbar { padding:28px 5% 0; } .back-btn { display:inline-flex; align-items:center; gap:.6rem; padding:.75rem 1rem; border-radius:999px; text-decoration:none; background:var(--black); color:var(--white); font-size:.82rem; font-weight:600; }
+    main { padding:32px 5% 80px; max-width:1100px; margin:0 auto; } .eyebrow { font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:1rem; }
+    h1 { font-family:'Syne',sans-serif; font-size:clamp(2.4rem,5vw,4.8rem); line-height:1.02; letter-spacing:-.05em; max-width:820px; } .lead { max-width:760px; font-size:1.05rem; color:#404040; margin-top:1.3rem; }
+    .hero-card { margin-top:2rem; padding:1.25rem 1.4rem; border:1px solid var(--border); border-radius:16px; background:rgba(255,255,255,.86); max-width:760px; }
+    .hero-card strong { display:block; font-family:'Space Mono',monospace; font-size:.72rem; text-transform:uppercase; margin-bottom:.5rem; }
+    .grid { display:grid; grid-template-columns:1.2fr .9fr; gap:1.4rem; margin-top:2.5rem; } .panel { border:1px solid var(--border); border-radius:20px; background:var(--off); padding:1.6rem; } .panel h2 { font-family:'Syne',sans-serif; font-size:1.35rem; margin-bottom:1rem; }
+    .panel ul { padding-left:1.1rem; display:grid; gap:.8rem; color:#4b5563; } .mini-wrap { display:grid; gap:1rem; } .mini { border:1px solid var(--border); border-radius:18px; background:var(--white); padding:1.2rem; } .mini h3 { font-family:'Syne',sans-serif; font-size:1.02rem; margin-bottom:.55rem; } .mini p { color:#4b5563; font-size:.92rem; }
+    @media (max-width: 860px) { .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body><div class="shell"><div class="topbar"><a class="back-btn" href="index.html#capabilities">← Back to Portfolio</a></div><main>
+  <div class="eyebrow">Portfolio Capability</div>
+  <h1>Physics-Aware AI Control</h1>
+  <p class="lead">We combine model intelligence with hard physical limits so AI output remains useful without violating process constraints, operating envelopes, or known machine behavior.</p>
+  <div class="hero-card"><strong>What This Covers</strong>Action gating, operating-bound enforcement, plausibility checks, control constraints, and supervisory policies that keep intelligent systems grounded in physics.</div>
+  <div class="grid">
+    <section class="panel"><h2>Technical Scope</h2><ul>
+      <li>Control logic that evaluates model output against machine limits, safety thresholds, and process constraints before execution.</li>
+      <li>Physical plausibility screening for recommendations that may be statistically likely but operationally unsafe or invalid.</li>
+      <li>Constraint-aware control envelopes that limit intensity, duration, amplitude, or speed of machine actions.</li>
+      <li>Hybrid reasoning patterns that combine learned signals with deterministic rules and domain-specific control heuristics.</li>
+      <li>Escalation pathways when the AI recommendation falls outside approved physical behavior.</li>
+    </ul></section>
+    <div class="mini-wrap">
+      <section class="mini"><h3>Typical Deliverables</h3><p>Constraint engine, supervisory policies, control boundary definitions, and integration hooks into runtime decision systems.</p></section>
+      <section class="mini"><h3>Why It Matters</h3><p>It makes AI usable in physical systems where an unbounded prediction can create real operational risk.</p></section>
+      <section class="mini"><h3>Integration Pattern</h3><p>AI output → plausibility check → control envelope validation → allowed, limited, or blocked action path.</p></section>
+    </div>
+  </div>
+</main></div></body></html>
