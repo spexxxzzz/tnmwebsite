@@ -809,8 +809,13 @@
     }
 
     .btn-static {
-      cursor: default;
-      user-select: text;
+      cursor: pointer;
+      user-select: none;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: inherit;
     }
 
     .btn-ghost {
@@ -1288,7 +1293,7 @@
     We'll design an AI infrastructure roadmap within 48 hours.
   </p>
   <div class="cta-btns">
-    <span class="btn-grad btn-static">info@tensormaxwell.com</span>
+    <button type="button" class="btn-grad btn-static" id="copy-email-btn" data-email="info@tensormaxwell.com">Contact us: info@tensormaxwell.com</button>
     <a href="#capabilities" class="btn-ghost">Browse Portfolio</a>
   </div>
   <div class="office-grid">
@@ -1323,6 +1328,7 @@
 <!-- ── SCROLL REVEAL JS ── -->
 <script>
   const reveals = document.querySelectorAll('.reveal');
+  const copyEmailBtn = document.getElementById('copy-email-btn');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
@@ -1335,6 +1341,22 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   reveals.forEach(el => observer.observe(el));
+
+  if (copyEmailBtn) {
+    const defaultLabel = copyEmailBtn.textContent;
+    copyEmailBtn.addEventListener('click', async () => {
+      const email = copyEmailBtn.dataset.email || 'info@tensormaxwell.com';
+      try {
+        await navigator.clipboard.writeText(email);
+        copyEmailBtn.textContent = 'Copied';
+        window.setTimeout(() => {
+          copyEmailBtn.textContent = defaultLabel;
+        }, 1600);
+      } catch (error) {
+        copyEmailBtn.textContent = email;
+      }
+    });
+  }
 </script>
 
 </body>
