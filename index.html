@@ -759,9 +759,11 @@
 
     .office-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(2, minmax(260px, 360px));
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 2rem auto 0;
+      max-width: 780px;
       position: relative;
       z-index: 1;
     }
